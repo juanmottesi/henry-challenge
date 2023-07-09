@@ -1,0 +1,86 @@
+.card {
+  border: 1px solid #E6E6E6;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.select {
+  border-radius: 0.75rem;
+}
+
+.table :global(.table) {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.table :global(thead) {
+  height: 3rem;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  background-color: #FAFAFA;
+  text-transform: uppercase;
+}
+
+.tableElement {
+  text-align: start;
+  padding-left: 1rem;
+  height: 3rem;
+}
+
+.separator {
+  position: relative;
+}
+
+.separator::after {
+  content: '';  
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.5rem;
+  width: 2px;
+  background-color: #E6E6E6;
+}
+
+.withoutSeparatorBeforeLG.separator::after {
+  content: unset;
+}
+
+.displayLG {
+  display: none;
+}
+
+.emptyContainer {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .headerContainer {
+    flex-direction: row;
+  }
+
+  .headerContainer > * {
+    width: 25%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .displayLG {
+    display: table-cell;
+  }
+
+  .withoutSeparatorBeforeLG.separator::after {
+    content: '';
+  }
+}

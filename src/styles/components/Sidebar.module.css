@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.brand {
+  object-fit: contain;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem;
+  background-color: #FFE84D;
+  border: none;
+  outline: none;
+  border-radius: .75rem;
+}
+
+.gap {
+  margin-left: 4.375rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding: 2.5rem 1.25rem;
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 1px solid #E6E6E6;
+  }
+
+  .gap {
+    margin-left: 0px;
+    margin-top: 4.375rem;
+  }
+}

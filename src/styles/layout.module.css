@@ -1,0 +1,25 @@
+.body {
+  margin: 0;
+}
+
+.template {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.childrenContainer {
+  flex: 1;
+  background-color: #F2F2F2;
+  padding: 1rem;
+}
+
+@media (min-width: 48em) {
+  .template {
+    flex-direction: row;
+  }
+
+  .childrenContainer {
+    padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  }
+}
